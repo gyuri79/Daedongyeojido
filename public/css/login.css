@@ -1,0 +1,57 @@
+body { /*문서 배경 지정*/
+    background:url('img/background.png')no-repeat right bottom fixed;
+    background-size:cover;
+}
+
+#member { 
+    width:600px; 
+    border:#E2E6E9 solid 1px; 
+    border-radius:10px; 
+    margin:100px auto; 
+    padding:60px; 
+    background:rgba(247, 247, 247, 0.705) 
+}
+    
+#member .btn { 
+    width:100%; 
+    height:40px; 
+}
+
+#member .btn a { 
+    width:50%; 
+    height:40px; 
+    float:left; 
+    border:none; 
+    background:#5C616F; 
+    color:#FFFFFF; 
+    font-size:1.05em; 
+    cursor:pointer; 
+    text-align:center; 
+    line-height:40px;
+    text-decoration: none;
+}
+        
+#member .btn a.on { 
+    background:rgb(3, 132, 184); 
+}
+    
+#member .form { 
+    width:400px;
+    padding-top:50px; 
+}
+        
+#member .form input { 
+    width:100%; 
+    padding:5px; 
+    margin:7px 0; 
+    font-size:1.05em; 
+    border:#CCCCCC solid 1px; 
+    border-radius:3px; 
+}
+        
+#member .form input[type=submit] { 
+    margin-top:20px; 
+    color:#FFFFFF; 
+    cursor:pointer; 
+    background:#888888; 
+}

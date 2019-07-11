@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>한국소개</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/vg.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/jquery.min.js"> </script>
+    <script src="/jquery.smint.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <ul class="nav nav-tabs" style="background-color: black; ">
+        <li class="nav-item">
+            <a class="nav-link active" href="index">HOME</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">문화</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">환경</a>
+        </li>
+    </ul>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color:rgba(240, 248, 255, 0.582)">
+        <div class="container">
+            <h1 class="display-4">Introducing Korea
+            </h1>
+            <p class="lead">대한민국이라는 나라에 대해서 알아볼까요^!^</p>
+        </div>
+    </div>
+
+    <div class="col-sm-6" style="top: 50px;">
+        <div class="card">
+            <img src="/img/seoul.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style="color:#3d3d3d;">대한민국의 수도 <br> 한반도의 거의 중앙에 위치하며, 대한민국의 정치·경제·문화·교통의 중심지 </p>
+            </div>
+        </div>
+        <div class="card" style="top: 100px;">
+            <img src="/img/Gwangju.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text" style="color:#3d3d3d;">전라남도 중북부에 위치한 광역시 <br>광산구에는 아름다운 GSM이 있다^!^ 그리고 그 안에는 NODE가있찌 :) </p>
+            </div>
+        </div>
+    </div>
+
+    <a href="introduce" class="jcm-top"><img src="/img/up.svg" style="height: 40px;margin-bottom: 40px;"> </a>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.jcm-top').fadeIn();
+                } else { $('.jcm-top').fadeOut(); }
+            }
+            ); $('.jcm-top').click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            }
+            );
+        }
+        ); 
+    </script>
+
+</body>
+
+</html>

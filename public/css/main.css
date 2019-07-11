@@ -1,0 +1,224 @@
+*{ /*박스 모델의 너비를 테두리까지 포함*/
+    margin: 0 auto;
+    padding:0;
+    box-sizing: border-box; /*박스 모델의 넓이를 테두리까지 포함 */
+    letter-spacing: -1px;
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: rgb(31, 28, 28) !important;
+}
+
+body { /*문서 배경 지정*/
+    background:url('/img/background.png')no-repeat right bottom fixed;
+    background-size:cover;
+}
+
+#util .menu a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+a:link, a:visited{ /*텍스트 링크 스타일 지정*/
+    font-size:1.2em;
+    color:#fff;
+    text-decoration: none; 
+    text-shadow:1px 1px 0 #393b3d65;
+    text-align:center;
+}
+
+nav { /*내비게이션 너비와 배경, 글자 스타일*/
+    width:100%;
+    height: 50px;
+    background: #08090994;
+    font-size:1.2em;
+    font-weight:bold;
+    position: relative;
+}
+
+nav ul { /*메뉴 막대는 보이지 않게 지정 : 작은화면*/
+    display:none;
+    height: auto;
+}
+
+nav ul li { /*작은화면 : 블록 레벨 요소로 지정, 항목 아래 테두리*/
+    display: block;
+    width:100%;
+    text-align:center;
+    border-bottom:1px solid #ffffff9a;
+}
+
+nav ul:last-child {
+    border-right: 0; /*마지막 메뉴 항목에는 오른쪽 테두리 표시X*/
+}
+
+nav ul li a { /*작은화면 : 메뉴 항목 텍스트의 줄 간격*/
+    line-height:50px;
+}
+
+nav a#trigger { /*작은화면 : 트리거를 화면에 표시*/
+    display:block;
+    background-color:#03030366;
+    width:100%;
+    padding-left:15px;
+    line-height:40px;
+    position:relative;
+}
+
+nav a#trigger::after{ /*트리거 옆에 이미지 표시*/
+    content:"";
+    background:url('/img/nav.png') no-repeat;
+    width:30px;
+    height:30px;
+    display:inline-block;
+    position:absolute;
+    right:15px;
+    top:10px;
+}
+
+.nav-btn {
+    display: inline-block;
+    height:50px;
+    width:20%;
+    margin:0;
+    line-height:50px;
+}
+
+@media screen and (min-width:721px){ /*큰화면 적용 : 작은 화면의 nav 태그 스타일은 그대로 유지*/    
+    
+    nav{
+        height:50px;
+        /* border-bottom:2px solid #090a0a8a; */
+    }
+    
+    nav ul { 
+        display:block; /*메뉴 막대를 화면에 표시*/
+        width:520px; /*미뉴막대의 너비와 높이*/
+        height:50px;
+        padding:0;
+        margin:0 auto;
+    }
+    
+    nav ul li { 
+        display: inline-block; /*메뉴 항목을 가로로 배치, 너비와 높이를 지정할 수 있도록 인라인블록으로 설정*/
+        width:100px; /*메뉴 항목의 너비*/
+        border-bottom:0; /*작은 화면에서 사용했던 아래 테두리 없앰*/
+        /* border-right:1px solid #00000081; 오른쪽에 테두리 표시 */
+        margin-right:-6px; /*인라인블록일때 생기는 마진 때문에 음수 값으로 마진 지정*/
+    }
+    
+    nav ul li a { 
+        font-size:1em;
+        line-height:40px;
+    }
+    
+    nav a#trigger {
+        display: none; /*트리거를 화면에 표시X*/
+    }
+   
+}
+
+/* Header */
+#util {
+    width: 100%;
+    height: 40px;
+    background: #090a0a9d;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    line-height: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+section { /*내용 영역의 크기*/
+	position:relative;
+	width:100%;	
+	margin:0 auto;
+	padding:20px;
+	height:800px;
+	border:1px solid black;
+}
+section h2 { /*내용 영역 중간의 제목 표시*/
+	font-size:4em;
+	color:white;
+	text-shadow:1px 2px 1px black;
+	line-height: 600px;
+	text-align: center;
+	text-transform: uppercase;
+}
+/*각 영역마다 배경 표시*/
+.page1{
+	background:url('/img/1-1.jpeg') no-repeat right bottom fixed;			
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;    
+}
+.page2{
+	background:url('/img/2-2.jpeg') no-repeat right bottom fixed;			
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;  
+}
+.page3{
+	background:url('/img/3-3.jpeg') no-repeat right bottom fixed;			
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;   
+}
+
+.button {
+    text-align: center;
+    
+}
+ 
+.card-title {
+    font-size: 1.5em;
+    font-weight:700;
+}
+
+a.jcm-top {
+    position: fixed; 
+    right: 15px; 
+    bottom: 15px; 
+    border-radius: 5px; 
+    color: #000000; 
+    text-align: center; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 50px; /*background-color: rgba(50,50,50,0.5);*/ 
+    background-color:#ffffff; 
+    opacity:0.5;
+    z-index: 999; 
+    display: none; }
+
+a.jcm-top:hover{
+    background-color:rgb(77, 118, 255)
+}
+
+label {
+    font-size: 1.8em;
+    font-weight:700;
+    color: rgb(184, 184, 184);
+}
